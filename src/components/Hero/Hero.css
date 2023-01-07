@@ -1,0 +1,78 @@
+.carousel_item {
+  width: 100%;
+  height: 900px;
+}
+body {
+  overflow-x: hidden;
+}
+.h1_carousel {
+  color: white;
+  z-index: 10;
+  font: 45px "Libre Baskerville", serif;
+  position: absolute;
+  bottom: 441px;
+  left: 36%;
+}
+
+._div_h1_carousel {
+  position: relative;
+}
+span {
+  color: #0fb78d;
+}
+
+.heroBtn {
+  font: 11px "Muli", sans-serif;
+  height: 49px;
+  width: 153px;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+  right: 300px;
+  top: 100px;
+}
+.slick-dots {
+  background-color: #f8f9fa;
+}
+.heroBtn:hover {
+  color: white;
+  background-color: black;
+}
+
+.hero_cards {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.herocard {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  margin-right: 20px;
+}
+.h3_herocards {
+  font: 11px "Libre Baskerville", serif;
+  font-weight: 400;
+  letter-spacing: 3.2px;
+  line-height: 13.2px;
+  color: #333;
+}
+.p_herocards {
+  font: 15px "Mulish", sans-serif;
+  font-weight: 400;
+  color: #b7b7b7;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .carousel_item {
+    width: 309%;
+    height: 700px;
+  }
+
+  .img_div_carousel1 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+.products_preview_wrap {
+  display: grid;
+  grid-template-columns: 370px 370px 370px;
+  grid-template-rows: 550px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.p_p_image {
+  width: 200px;
+  height: 250px;
+}
+
+.p_p_item {
+  align-self: center;
+}
+
+.p_p_item:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.p_p_Btn {
+  font: 11px "Muli", sans-serif;
+  height: 60px;
+  width: 153px;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 50px;
+}
+
+.p_p_Btn:hover {
+  background-color: black;
+  opacity: 1;
+  color: white;
+}
