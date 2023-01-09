@@ -1,0 +1,85 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #dfe2df;
+  border: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+}
+.p_navbar {
+  position: absolute;
+  left: 381px;
+  cursor: pointer;
+  font: 12px Muli, sans-serif;
+  font-weight: 700;
+  letter-spacing: 6.4px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  font: 11px Muli, sans-serif;
+  padding: 10px 15px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 1.6;
+}
+
+.onScroll {
+  background-color: #fefefe;
+}
+.mobile_navbar {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .onScroll {
+    display: none;
+  }
+  .mobile_navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .p_mobile_navbar {
+    font: 15px Muli, sans-serif;
+    font-weight: 700;
+    letter-spacing: 6.4px;
+    position: absolute;
+    left: 30px;
+    top: 17px;
+  }
+
+  .navbar_menu_close {
+    display: none;
+  }
+
+  .navbar_menu_open {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: white;
+    position: relative;
+    left: 150px;
+    bottom: 35px;
+    height: 770px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .a_mobile {
+    margin-bottom: 13px;
+    font: 18px Muli, sans-serif;
+    position: relative;
+    bottom: 30px;
+    right: 60px;
+  }
+}

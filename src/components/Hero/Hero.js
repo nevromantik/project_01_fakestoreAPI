@@ -22,7 +22,7 @@ const Hero = (props) => {
 
   return (
     <>
-      <Slider {...settings}>
+      <Slider {...settings} className="sl">
         <div className="img_div_carousel1">
           <img src={img1} className="carousel_item"></img>
           <div className="_div_h1_carousel">
@@ -33,7 +33,7 @@ const Hero = (props) => {
           </div>
         </div>
         <div className="img_div_carousel">
-          <img src={img2} className="carousel_item"></img>
+          <img src={img2} className="carousel_item ci2"></img>
         </div>
       </Slider>
       <div className="hero_cards">

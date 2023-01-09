@@ -16,30 +16,34 @@ function Generalproductlist() {
     });
   };
   return (
-    <div className="products_preview_wrap">
-      {datas?.map((product) => {
-        return (
-          <div className={`p_p_item item-${product.id}  `} key={product.id}>
-            <img
-              src={product.image}
-              alt={product.title}
-              className="p_p_image "
-            ></img>
-            <p className="p_p_title ">{product.title}</p>
-            <p className="p_p_price ">{product.price}$</p>
-            <button
-              className="p_p_Btn"
-              onClick={(e) => {
-                e.preventDefault();
-                addToCart(product.id);
-              }}
-            >
-              ADD TO CART
-            </button>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <h1 className="p_p_h1">Product's preview</h1>
+
+      <div className="products_preview_wrap">
+        {datas?.map((product) => {
+          return (
+            <div className={`p_p_item item-${product.id}  `} key={product.id}>
+              <img
+                src={product.image}
+                alt={product.title}
+                className="p_p_image "
+              ></img>
+              <p className="p_p_title ">{product.title}</p>
+              <p className="p_p_price ">{product.price}$</p>
+              <button
+                className="p_p_Btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  addToCart(product.id);
+                }}
+              >
+                ADD TO CART
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
 

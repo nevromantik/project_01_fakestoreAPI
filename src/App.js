@@ -10,6 +10,7 @@ import Home from "./homepage/home";
 import Clothingpage from "./clothingpage/clothingpage";
 import Cart from "./cartpage/cart";
 import { createContext, useEffect, useState } from "react";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import axios from "axios";
 export const DataContext = createContext();
@@ -29,19 +30,9 @@ function App() {
   }, []);
   return (
     <Router>
-      <ul>
-        <li>
-          <Link to="/checkout">cart</Link> {cart.length}
-        </li>
-        <li>
-          <Link to="/">home</Link>
-        </li>
-        <li>
-          <Link to="/clothingpage">clothingpage</Link>
-        </li>
-      </ul>
-      <div className="App">
-        <DataContext.Provider value={{ datas, setData, cart, setCart }}>
+      <DataContext.Provider value={{ datas, setData, cart, setCart }}>
+        <Navbar></Navbar>
+        <div className="App">
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route
@@ -50,8 +41,8 @@ function App() {
             ></Route>
             <Route path="/checkout" element={<Cart></Cart>}></Route>
           </Routes>
-        </DataContext.Provider>
-      </div>
+        </div>
+      </DataContext.Provider>
     </Router>
   );
 }

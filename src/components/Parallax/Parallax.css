@@ -48,3 +48,16 @@
   font-size: 18px;
   line-height: 25px;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .parallax-content {
+    background-color: white;
+    z-index: 10;
+    width: 248px;
+    position: absolute;
+    top: 300px;
+    left: 9px;
+    padding: 20px;
+    text-align: start;
+  }
+}

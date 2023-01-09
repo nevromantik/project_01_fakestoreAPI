@@ -1,0 +1,8 @@
+.filtered_btn {
+  width: 100px;
+  height: 50px;
+  border: none;
+  padding: 10px;
+  font: 10px "Libre Baskerville", sans-serif;
+  cursor: pointer;
+}

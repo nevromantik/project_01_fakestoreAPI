@@ -4,7 +4,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { BsCart } from "react-icons/bs";
-import { HashLink } from "react-router-hash-link";
+import { DataContext } from "../../App";
+import { useContext } from "react";
 const style = {
   fontSize: "30px",
   position: "relative",
@@ -20,6 +21,8 @@ const style2 = {
 };
 const Navbar = (props) => {
   //LA PROPS CONTIENE L'ID DEL PRODOTTO SELEZIONATO IN PREVIEW
+  const { datas, setData, cart, setCart, price } = useContext(DataContext);
+
   const [sticky, setSticky] = useState();
   const [openMenu, setOpenMenu] = useState(false);
   const [menuClass, setMenuClass] = useState("navbar_menu_close");
@@ -47,14 +50,18 @@ const Navbar = (props) => {
   return (
     <>
       <nav className={sticky}>
-        <p className="p_navbar">PRODUCT</p>
-        <a href="#">CLOTHINGS</a>
-
-        <a href="#">JEWELERY</a>
-        <a>ELECTRONICS</a>
-        <HashLink smooth to="/#cart_section">
-          <BsCart></BsCart>{" "}
-        </HashLink>
+        <p className="p_navbar">
+          {" "}
+          <Link to="/">PRODUCT</Link>
+        </p>
+        <a href="#">
+          <Link to="/clothingpage">CLOTHING</Link>
+        </a>
+        <a href="#">
+          <Link to="/checkout">CART</Link>
+        </a>
+        <span>{cart.length}</span>
+        <BsCart></BsCart>{" "}
       </nav>
 
       <nav className="mobile_navbar">

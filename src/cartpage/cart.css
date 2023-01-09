@@ -1,7 +1,7 @@
 .cart_general_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
 }
 .cart_empty {
@@ -20,6 +20,8 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  overflow-y: scroll;
+  height: 720px;
 }
 .cart_first_block {
   background-color: #f8f9fa;
@@ -31,11 +33,12 @@
 .cart_container_grid {
   display: grid;
   grid-template-columns: 5fr 10fr 5fr 10fr 5fr;
-  margin-bottom: 50px;
   padding: 40px;
   background-color: #f8f9fa;
 }
-
+select {
+  margin-left: 20px;
+}
 .cart_title,
 select,
 .cart_price,
@@ -49,7 +52,52 @@ select,
   position: relative;
   bottom: -25px;
 }
+.cart_title {
+  font-size: 13px;
+}
+.cart_price {
+  font-size: 13px;
+}
 
+.cart_third_block {
+  width: 30%;
+  background-color: #dddddd;
+  position: absolute;
+  left: 50%;
+  bottom: 130px;
+  height: 720px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cart_second_block::-webkit-scrollbar {
+  background-color: white;
+}
+.cart_second_block::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 161, 92, 0.534);
+  border-radius: 10px;
+}
+.ctb_2 {
+  display: flex;
+  flex-direction: column;
+}
+.total_btn {
+  width: 300px;
+  height: 100px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+  position: relative;
+  left: 130px;
+  top: 150px;
+  font-family: "Libre Baskerville", serif;
+}
+.summary,
+.totalspan {
+  font-family: "Libre Baskerville", serif;
+  color: black;
+}
 @media only screen and (max-width: 600px) {
   .cart_container_grid {
     display: flex;
@@ -63,5 +111,58 @@ select,
     position: relative;
     right: 30px;
     margin-bottom: 20px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 425px) {
+    .cart_third_block {
+      width: 90%;
+      background-color: #dddddd;
+      position: absolute;
+      left: 1%;
+      bottom: -565px;
+      height: 720px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .cart_second_block {
+      display: flex;
+      flex-direction: column;
+      width: 91%;
+      overflow-y: scroll;
+      height: 720px;
+    }
+
+    .total_btn {
+      width: 214px;
+      height: 58px;
+      border: none;
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      font-size: 15px;
+      position: relative;
+      left: 47px;
+      top: 150px;
+      font-family: "Libre Baskerville", serif;
+    }
+
+    .cart_image {
+      width: 100px;
+      height: 100px;
+      justify-self: center;
+      margin-right: 50px;
+      position: relative;
+      left: 61px;
+    }
+
+    .cart_title,
+    .cart_price,
+    select,
+    .cart_icon {
+      position: relative;
+      right: 0px;
+      margin-bottom: 22px;
+    }
   }
 }

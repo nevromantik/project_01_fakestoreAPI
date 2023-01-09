@@ -49,6 +49,9 @@ function Cart() {
     const selectedObj = cart.find((el) => {
       return el.id === selectedElement;
     });
+    if (cart.includes(selectedObj)) {
+      console.log("incluso");
+    }
     setCart(
       cart.filter((el) => {
         return el.id !== selectedObj.id;
@@ -110,6 +113,22 @@ function Cart() {
               );
             })}{" "}
           </div>{" "}
+          <div className="cart_third_block">
+            <h3 className="summary">Summary</h3>
+            <div className="ctb_2">
+              <span className="totalspan">
+                <h3>Product: {cart.length}</h3>{" "}
+                <h3>
+                  Total price:{" "}
+                  {cart.reduce((acc, obj) => {
+                    return acc + obj.price;
+                  }, 0)}{" "}
+                  $
+                </h3>
+              </span>
+              <button className="total_btn">CHECKOUT</button>
+            </div>
+          </div>
         </>
       )}
     </div>
